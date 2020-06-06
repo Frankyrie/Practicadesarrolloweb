@@ -1,31 +1,160 @@
+/*  rosa: #d500f9 */
+/* especificidad: Entre más especifico sea con una línea de código, 
+tiene mayor peso o prioridad en el orden de aparición en el navegador
+orden de jerarquías:
+1.!important
+2.Atributo style.
+
+- Pero !important no se usa por buenas practicas.  
+  Selectores de CSS:
+1. de id, que solo se debe usar uno por documento html.
+2. de clases (class es bueno cuando tenemos que aplicar el mismo estilo en muchos elementos.), atributos y pseudoclases
+selectores de tipo o etiqueta y pseudo elementos.
+
+*/
+
+/* position: static|relative|absolute|fixed(viewport se pone relativo a la pantalla)|sticky */
 
 
+html{
+    font-family: 'Baloo 2', cursive;
+}
+a{
+    text-decoration: none;
+    color: #d500f9;
+}
+
+img{
+max-width: 100%;    
+}
+
+a:hover{
+opacity:0.4;
+}
+.title{
+text-transform: uppercase;
+text-align: center;
+}
 .container{
     background: #fc354c; /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #fc354c, #0abfbc); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #fc354c, #0abfbc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
-    height: 100vh; 
+    height: 70vmax; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
 .content{
  max-width: 960px;
- max-height: 500px;
  width: 100%;
- height:100%;
+ height: 80vh;
  background-color: white;
+ /*box box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color;*/
+box-shadow: 0 3px 6px rgb(0,0,0,0.16),0 3px 6px rgb(0,0,0,0.23);
+border-radius: 4px;
+position: relative;
+overflow-y: scroll;
 }
-.red{
-    height: 200px;
-    width: 100px;
-    background-color: red;
-}
-#boton-pago{
-    background-color: yellow;
 
+.content{
+    padding:1.8em;    
+    }    
+
+   td{
+     display: block;
+     width: 100%;    
+   }
+  {
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #642b73 ;    
+   }
+   th{
+    display: none;    
+   }
+
+.actions{
+position: absolute;
+top: 1em;
+right: 1em;    
 }
-td{
-  border:solid 1px;     
+
+.close{
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+background-color: #642b73;
+display: inline-block;
+box-shadow: 0 3px 6px rgb(0,0,0,0.16), 0 3px 6px rgb(0,0,0,0.23);
+font-weight: 300;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.table{  
+width: 100%;
+border-spacing: 30px;
+}
+.table td, .table th{
+padding: 1em;
+text-align: left;
+}
+.table tr:nth-child(even){background-color:#f3e5f5;}
+
+.title-item{
+/* border-bottom-style: solid;
+border-width: 2px;
+border-color: #c6426e; */
+border-bottom: solid 2px #c6426e;
+padding-bottom: 1em;
+font-size: 2em;    
+}
+
+.main-image{
+float: left;
+margin-right: 1em;
+height: 250px;    
+}
+
+.position{
+background-color: #c6426e;
+color: white;
+padding: o.5em;
+border-radius: 4px;
+margin-right: 0.5em;    
+}
+
+@media(min-width:900px){
+ th{
+display: table-cell;
+ }
+    td{
+    width: auto;    
+    display: table-cell
+
+ }
+ td:nth-of-type(1){
+ font-size: 1em;    
+.content{
+padding: 1.8em;
+}
+ }    
+}
+
+
+@media (min-height:550px){
+.content{
+height: 500px;    
+}    
+}
+.paragraph{
+    line-height: 1em;
+    font-weight: 200;    
+    }
+.fa-star{
+color: #ffc400   
 }
